@@ -1,0 +1,5 @@
+<app-video-list [videos]="videos" [selectedVideo]="selectedVideo" (videoClicked)="onvideoClicked($event)"></app-video-list>
+<p *ngIf="!selectedVideo">Please select a video</p>
+<app-video-embedder *ngIf="selectedVideo" [selectedVideo]="selectedVideo"></app-video-embedder>
+<app-view-graph></app-view-graph>
+<app-view-filter-form></app-view-filter-form>
